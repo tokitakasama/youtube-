@@ -17,7 +17,7 @@ def index():
             # m3u8ファイルの内容を解析し、ストリームのURLを取得
             stream_url = get_stream_url(m3u8_content)
 
-            return render_template('player.html', stream_url=stream_url)
+            return render_template('player.html', stream_url=m3u8_url)
         except requests.exceptions.RequestException as e:
             return render_template('index.html', error=f"Error: {e}")
         except ValueError as e:
