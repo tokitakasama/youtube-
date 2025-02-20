@@ -33,4 +33,5 @@ def get_stream_url(m3u8_content):
     raise ValueError("No stream URL found in m3u8 file")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
