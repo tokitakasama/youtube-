@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>m3u8 Stream Player</title>
+</head>
+<body>
+    <h1>m3u8 Stream Player</h1>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        <label for="m3u8_url">m3u8 URL:</label>
+        <input type="text" name="m3u8_url" id="m3u8_url" required>
+        <button type="submit">Play</button>
+    </form>
+</body>
+</html>
